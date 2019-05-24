@@ -1,0 +1,22 @@
+.projects-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: $globalMarginBottom / 2;
+    margin-top: -1rem;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: scroll;
+    padding: 1rem 2rem;
+    @include breakpoint(phone-only) {
+        padding: 0 1rem;
+    }
+    &__item {
+        // display: inline-block;
+        display: table-cell;
+        padding-right: 1rem;
+        &_next{
+            vertical-align: middle;
+        }
+    }
+}

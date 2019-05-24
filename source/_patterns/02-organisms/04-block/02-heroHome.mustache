@@ -1,0 +1,20 @@
+<header class="hero-home">
+    <div class="hero-home__covered hero-home__presentation">
+        <img class="hero-home__cover" src="/images/home.jpg" alt="">
+        {{> atoms-logo }}
+        <h1 class="hero-home__title">
+            <small>L'agence et moi</small>
+            {{! Vous connaissez votre projet,<br>
+            nous connaissons l'immobilier }}
+            Ça y est ! <br>
+            Vous faites de l'immobilier !
+        </h1>
+    </div>
+    <div class="hero-home__covered hero-home__login">
+        <img class="hero-home__cover" src="/images/login.jpg" alt="">
+        <a href="{{link.pages-login}}" class="button button_size_small button_hollow button_color_red">Se connecter</a>
+    </div>
+    <div class="hero-home__form">
+        {{> organisms-searchHome }}
+    </div>
+</header>

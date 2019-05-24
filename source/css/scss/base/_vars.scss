@@ -1,0 +1,163 @@
+// Global
+$globalTypoSize: 16;
+@import "functions/index";
+$globalRadius: spToRem(8);
+$globalBorderWidth: 2px;
+$globalMarginBottom: 2rem;
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Merriweather:300,400");
+@import "avenir-next/avenir-next";
+$fontFamilyPrimary: "Avenir Next", sans-serif;
+$fontFamilySecondary: "Merriweather", serif;
+$textColorDefault: $colorPrimary;
+$linkColor: $colorPrimary;
+$selectionColorBackground: transparentize(
+    $color: $blue,
+    $amount: 0.84
+);
+$selectionColorText: $textColorDefault;
+// Form
+$inputBorderColor: $lightBlue;
+$inputBorderWidth: $globalBorderWidth;
+// Buttons
+$buttonBorderWidth: $globalBorderWidth;
+// Colors
+$colorChangeRatio: 10%;
+// Breakpoints
+$phone-upper-boundary: 600px;
+$tablet-portrait-upper-boundary: 900px;
+$tablet-landscape-upper-boundary: 1200px;
+$desktop-upper-boundary: 1800px;
+//Colors tooltips
+$colorTooltipDefault: $colorPrimary;
+$colorsTooltip: (
+dark: (
+class: "primary",
+first: $colorPrimary,
+second: white
+),
+green: (
+class: "green",
+first: $green,
+second: white
+),
+grey: (
+class: "red",
+first: $red,
+second: white
+),
+orange: (
+class: "grey",
+first: $grey,
+second: white
+),
+white: (
+class: "white",
+first: white,
+second: $colorPrimary
+),
+//state 
+success: (
+class: "success",
+first: $green,
+second: white
+),
+danger: (
+class: "danger",
+first: $red,
+second: white
+),
+warning: (
+class: "warning",
+first: $grey,
+second: white
+),
+info: (
+    class:"info",
+    first: $lightBlue,
+    second: $blue
+)
+);
+$dpeColors: (
+    a: (
+        class: "a",
+        size: 1,
+        color: #319A31
+    ),
+    b: (
+        class: "b",
+        size: 2,
+        color: #33CC33
+    ),
+    c: (
+        class: "c",
+        size: 3,
+        color: #CCFF33
+    ),
+    d: (
+        class: "d",
+        size: 4,
+        color: #FFFF00
+    ),
+    e: (
+        class: "e",
+        size: 5,
+        color: #FFCC00
+    ),
+    f: (
+        class: "f",
+        size: 6,
+        color: #FF9A33
+    ),
+    g: (
+        class: "g",
+        size: 7,
+        color: #E40118
+    )
+);
+$gesColors: (
+    a: (
+        class: "a",
+        size: 1,
+        color: #efdcff
+    ),
+    b: (
+        class: "b",
+        size: 2,
+        color: #E6C5FF
+    ),
+    c: (
+        class: "c",
+        size: 3,
+        color: #D4A7F6
+    ),
+    d: (
+        class: "d",
+        size: 4,
+        color: #CE96F6
+    ),
+    e: (
+        class: "e",
+        size: 5,
+        color: #BC73EE
+    ),
+    f: (
+        class: "f",
+        size: 6,
+        color: #AD4CEE
+    ),
+    g: (
+        class: "g",
+        size: 7,
+        color: #8B19DF
+    )
+);
+
+// Apply
+html {
+    color: $textColorDefault;
+}
+::selection {
+    color: $selectionColorText;
+    background: $selectionColorBackground;
+}

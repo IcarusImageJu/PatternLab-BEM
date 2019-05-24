@@ -1,0 +1,13 @@
+.table-row-input{
+    &>input{
+        margin-bottom: 0;
+    }
+    &>.select{
+        .select{
+            //No define here
+            &__value{
+                margin-bottom: 0;
+            }
+        }
+    }
+}

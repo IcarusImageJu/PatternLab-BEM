@@ -1,0 +1,24 @@
+.send-message {
+    display: grid;
+    grid-template-columns: 1fr 4rem;
+    &__textarea {
+        height: 6ch;
+        margin-bottom: 0;
+        border-radius: $globalRadius 0 0 $globalRadius;
+        border-right: none;
+        min-height: auto;
+        padding: .5rem 1rem .25rem .5rem;
+    }
+    &__button {
+        background: $colorPrimary;
+        color: white;
+        border-radius: 0 $globalRadius $globalRadius 0;
+        border: none;
+        outline: none;
+        box-shadow: none;
+    }
+    &__icon {
+        @extend .fa;
+        @extend .fa-paper-plane;
+    }
+}

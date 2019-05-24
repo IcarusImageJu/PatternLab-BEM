@@ -1,0 +1,24 @@
+
+.table-head {
+	list-style: none;
+	display: grid;
+	justify-content: stretch;
+	grid-auto-flow: column;
+	padding: .5rem;
+	grid-gap: 1rem;
+
+	@extend .overline;
+
+	grid-auto-columns: 1fr;
+	align-items: center;
+	margin: 0;
+	background: $grey;
+	color: $white;
+
+	&__item {
+
+		&_actions {
+			text-align: right;
+		}
+	}
+}

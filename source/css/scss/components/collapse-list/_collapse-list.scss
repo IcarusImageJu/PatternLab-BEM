@@ -1,0 +1,32 @@
+.collapse-list {
+    list-style: none;
+    padding: 0;
+    &__button {
+        margin-bottom: 0;
+        width: 100%;
+        text-align: left;
+    }
+    &__icon {
+        @extend .fa;
+        @extend .fa-chevron-down;
+        float: right;
+        @include transition;
+    }
+    &__content {
+        height: 0;
+        overflow: hidden;
+    }
+    &__item {
+        &_active {
+            .collapse-list {
+                // nothing here
+                &__icon {
+                    @extend .fa-rotate-180;
+                }
+                &__content {
+                    height: auto;
+                }
+            }
+        }
+    }
+}

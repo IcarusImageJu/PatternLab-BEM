@@ -1,0 +1,169 @@
+.tooltip,
+[data-tooltip] {
+    position: relative;
+    &:after {
+        @include transition();
+        opacity: 0;
+        visibility: hidden;
+        content: attr(data-tooltip);
+        position: absolute;
+        left: 50%;
+        bottom: 100%;
+        transform: translate(-50%, 0);
+        background: $colorTooltipDefault;
+        @extend .subtitle;
+        color:white;
+        margin-bottom: 0;
+        padding: 0.2rem 0.5rem;
+        border-radius: $globalRadius;
+        box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.15);
+        white-space: nowrap;
+        z-index: 1;
+    }
+    &:before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-left: 0.5rem solid transparent;
+        border-right: 0.5rem solid transparent;
+        border-top: 0.5rem solid $colorTooltipDefault;
+        position: absolute;
+        left: calc(50% - 0.5rem);
+        bottom: calc(100% - 0.5rem);
+        @include transition();
+        visibility: hidden;
+        opacity: 0;
+        z-index: 2;
+    }
+    &:hover {
+        &:after {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(-50%, -0.5rem);
+        }
+        &:before {
+            opacity: 1;
+            visibility: visible;
+            bottom: calc(100% + 1px);
+        }
+    }
+}
+//modifier mandatory need the class
+.tooltip {
+    @each $i, $color in $colorsTooltip {
+        &_color_#{map_get($color,class)} {
+            &:after {
+                background: map_get($color, first);
+                color: map_get($color, second);
+            }
+            &:before {
+                border-top-color: map_get($color, first);
+            }
+        }
+    }
+    &_position {
+        &_top {
+            &:after {
+                left: 50%;
+                bottom: 100%;
+                transform: translate(-50%, 0);
+            }
+            &:before {
+                border-left: 0.5rem solid transparent;
+                border-right: 0.5rem solid transparent;
+                border-top: 0.5rem solid $colorTooltipDefault;
+                left: calc(50% - 0.5rem);
+                bottom: calc(100% - 0.5rem);
+            }
+            &:hover {
+                &:after {
+                    transform: translate(-50%, -0.5rem);
+                }
+                &:before {
+                    bottom: calc(100% + 1px);
+                }
+            }
+        }
+        &_left {
+            &:after {
+                bottom: inherit;
+                right: 100%;
+                left: inherit;
+                top: 50%;
+                transform: translate(0, -50%);
+            }
+            &:before {
+                bottom: inherit;
+                left: inherit;
+                right: calc(100% - 0.5rem);
+                top: calc(50% - 0.5rem);
+                border-right: none;
+                border-top: 0.5rem solid transparent;
+                border-left: 0.5rem solid $colorTooltipDefault;
+                border-bottom: 0.5rem solid transparent;
+            }
+            &:hover {
+                &:after {
+                    transform: translate(-0.5rem, -50%);
+                }
+                &:before {
+                    bottom: inherit;
+                    left: inherit;
+                    right: calc(100% + 1px);
+                }
+            }
+        }
+        &_right {
+            &:after {
+                bottom: inherit;
+                left: 100%;
+                top: 50%;
+                transform: translate(0, -50%);
+            }
+            &:before {
+                bottom: inherit;
+                left: calc(100% - 0.5rem);
+                top: calc(50% - 0.5rem);
+                border-left: none;
+                border-top: 0.5rem solid transparent;
+                border-right: 0.5rem solid $colorTooltipDefault;
+                border-bottom: 0.5rem solid transparent;
+            }
+            &:hover {
+                &:after {
+                    transform: translate(0.5rem, -50%);
+                }
+                &:before {
+                    bottom: inherit;
+                    left: calc(100% + 1px);
+                }
+            }
+        }
+        &_bottom {
+            &:after {
+                bottom: inherit;
+                left: 50%;
+                top: 100%;
+                transform: translate(-50%, 0);
+            }
+            &:before {
+                bottom: inherit;
+                left: calc(50% - 0.5rem);
+                top: calc(100% - 0.5rem);
+                border-left: 0.5rem solid transparent;
+                border-right: 0.5rem solid transparent;
+                border-bottom: 0.5rem solid $colorTooltipDefault;
+                border-top: none;
+            }
+            &:hover {
+                &:after {
+                    transform: translate(-50%, 0.5rem);
+                }
+                &:before {
+                    bottom: inherit;
+                    top: calc(100% + 1px);
+                }
+            }
+        }
+    }
+}

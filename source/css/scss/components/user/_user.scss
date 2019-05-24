@@ -1,0 +1,73 @@
+$user-width: 25rem;
+
+.user {
+    width: $user-width;
+    @include breakpoint(phone-only) {
+        width: 100%;
+    }
+    background: white;
+    height: 4rem;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 4rem 1fr 2rem 4px;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 0 1rem;
+    align-items: center;
+    grid-template-areas:
+    "avatar context like status"
+    "avatar name like status"
+    "avatar plan like status";
+    @include shadow(1);
+    &__avatar {
+        grid-area: avatar;
+        max-width: 100%;
+        width: 100%;
+    }
+    &__context {
+        grid-area: context;
+        @extend .overline;
+    }
+    &__name {
+        grid-area: name;
+        @extend .typo_secondary;
+    }
+    &__plan {
+        grid-area: plan;
+        @extend .body-2;
+    }
+    &__like {
+        grid-area: like;
+        text-align: center;
+        color: $red;
+        @extend .fa;
+        @extend .fa-heart;
+    }
+    &__status {
+        grid-area: status;
+        height: 100%;
+        &_online {
+            background: $green;
+        }
+    }
+    &_big {
+        background: $grey;
+        color: white;
+        height: 6rem;
+        width: 100%;
+        grid-template-columns: 6rem 1fr 2rem 4px;
+        @include shadow(0);
+        align-items: center;
+        .user {
+            // nothing here
+            &__context {
+                text-transform: none;
+                @extend .subtitle-1;
+                margin-bottom: 0;
+            }
+            &__name {
+                @extend h5;
+                margin-bottom: 0;
+            }
+        }
+    }
+}

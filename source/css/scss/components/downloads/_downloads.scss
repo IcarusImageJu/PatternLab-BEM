@@ -1,0 +1,54 @@
+.downloads {
+    @extend .list, .list_no_style, .list_no_margin, .list_no_padding;
+    border-radius: $globalRadius;
+    overflow: hidden;
+    border: $globalBorderWidth solid $lightBlue;
+    background: white;
+    &__item {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        cursor: pointer;
+        border-bottom: 1px solid $lightBlue;
+        @include transition;
+        &:last-child {
+            border-bottom: none;
+        }
+        &:hover {
+            background: rgba($color: $blue, $alpha: 0.12);
+        }
+        &_valid {
+            .downloads {
+                // nothing here
+                &__infos {
+                    background: $green;
+                }
+            }
+        }
+        &_disabled {
+            cursor: not-allowed;
+            opacity: 0.54;
+            &:hover {
+                background: none;
+            }
+            .downloads {
+                // nothing here
+                &__infos {
+                    background: $grey;
+                }
+            }
+        }
+    }
+    &__title {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding: 1rem;
+        @extend .body;
+        font-weight: 500;
+    }
+    &__infos {
+        padding: 1rem;
+        background: $blue;
+        color: white;
+    }
+}

@@ -1,0 +1,122 @@
+// Vars
+@import "./node_modules/sass-material-colors/sass/sass-material-colors";
+$colorChangeRatio: 10%;
+// Google color palette : https://material.io/guidelines/style/color.html#color-color-palette
+$colorIndigo: material-color("indigo", "500");
+$colorGreen: material-color("green", "500");
+$colorOrange: material-color("orange", "500");
+$colorOrange: material-color("orange", "500");
+$colorRed: material-color("red", "500");
+$colorOrange: material-color("orange", "500");
+$colorYellow: material-color("yellow", "500"); //yellow 500
+$colorBlue: material-color("blue", "500"); //blue 500
+$colorPink: material-color("pink", "500"); //pink 500
+$colorPurple: material-color("purple", "500"); //purple 500
+$colorDeepPurple: material-color("deep-purple", "500"); //deep purple 500
+$colorLightBlue: material-color("light-blue", "500"); //light blue 500
+$colorCyan: material-color("cyan", "500"); //cyan 500
+$colorTeal: material-color("teal", "500"); //teal 500
+$colorLightGreen: material-color("light-green", "500"); //light green 500
+$colorLime: material-color("lime", "500"); //lime 500
+$colorAmber: material-color("amber", "500"); //amber 500
+$colorDeepOrange: material-color("deep-orange", "500"); //deep orange 500
+$colorBrown: material-color("brown", "500"); //brown 500
+$colorBlueGrey: material-color("blue-grey", "500"); //blue grey 500
+$colorBlack: material-color("grey", "900");
+$colorGrey: material-color("grey", "500");
+$colorGreyLight: material-color("grey", "100");
+$colorGreyLighter: material-color("grey", "50");
+// State color
+$colorDanger: $colorRed;
+$colorWarning: $colorOrange;
+$colorLink: $colorIndigo;
+$colorSuccess: $colorGreen;
+// Priority
+$colorPrimary: #0f6aff;
+$colorPrimaryLight: #4ac3e5;
+$colorPrimaryDark: #2c29e5;
+$colorSecondary: #fec53f;
+$colorBackground: $colorGreyLighter;
+// Theming object
+$themes: (
+    red: (
+        $colorRed,
+        white
+    ),
+    pink: (
+        $colorPink,
+        white
+    ),
+    purple: (
+        $colorPurple,
+        white
+    ),
+    deep-purple: (
+        $colorDeepPurple,
+        white
+    ),
+    indigo: (
+        $colorIndigo,
+        white
+    ),
+    blue: (
+        $colorBlue,
+        $colorBlack
+    ),
+    light-blue: (
+        $colorLightBlue,
+        $colorBlack
+    ),
+    cyan: (
+        $colorCyan,
+        $colorBlack
+    ),
+    teal: (
+        $colorTeal,
+        white
+    ),
+    green: (
+        $colorGreen,
+        $colorBlack
+    ),
+    light-green: (
+        $colorLightGreen,
+        $colorBlack
+    ),
+    lime: (
+        $colorLime,
+        $colorBlack
+    ),
+    yellow: (
+        $colorYellow,
+        $colorBlack
+    ),
+    amber: (
+        $colorAmber,
+        $colorBlack
+    ),
+    orange: (
+        $colorOrange,
+        $colorBlack
+    ),
+    deep-orange: (
+        $colorDeepOrange,
+        $colorBlack
+    ),
+    brown: (
+        $colorBrown,
+        white
+    ),
+    grey: (
+        $colorGrey,
+        $colorBlack
+    ),
+    blue-grey: (
+        $colorBlueGrey,
+        white
+    ),
+    black: (
+        $colorBlack,
+        white
+    )
+);

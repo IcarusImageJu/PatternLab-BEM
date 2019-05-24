@@ -1,0 +1,20 @@
+.cover {
+    position: relative;
+    overflow: hidden;
+    &__img {
+        opacity: 0.24;
+        z-index: 1 !important;
+        position: absolute !important;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    & > * {
+        position: relative;
+        z-index: 2;
+    }
+}

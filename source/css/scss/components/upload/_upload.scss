@@ -1,0 +1,47 @@
+.upload-box{
+    position: relative;
+    width: $picture-width;
+    height: $picture-height;
+    background: $grey;
+    @include breakpoint(phone-only) {
+        max-height: ($responsiveProjectMaxWidth / 16 * 9);
+    }
+
+    &:hover {
+        @include shadow(3);
+        .upload-box{
+            &__overlay{
+                @include transition();
+                opacity: 1;
+            }
+        }
+    }
+    
+    &__overlay{
+        opacity: 0;
+        position: absolute;
+        top: 1%;
+        left: 1%;
+        bottom: 0;
+        height: 98%;
+        width: 98%;
+        border: 2px dashed $white;
+    }
+    &__label{
+        position: absolute;
+        width: 90%;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 4%;
+        text-align: center;
+        color: $white;
+        text-transform: uppercase;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+        0 1px 2px transparentize(white, 0.76);
+    }
+    &:hover{
+        cursor: pointer;
+    }
+}

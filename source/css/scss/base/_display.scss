@@ -1,0 +1,17 @@
+.display {
+    &_inline {
+        display: inline;
+    }
+    &_inline-block {
+        display: inline-block;
+    }
+    &_inline-flex {
+        display: inline-flex;
+    }
+    &_block {
+        display: block;
+    }
+    &_flex {
+        display: flex;
+    }
+}

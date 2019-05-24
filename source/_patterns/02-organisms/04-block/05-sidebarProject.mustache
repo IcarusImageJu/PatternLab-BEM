@@ -1,0 +1,38 @@
+<div class="sidebar-project">
+    <div class="sidebar-project__container sidebar-project__container_header">
+        <span class="sidebar-project__header-context">Le loft est <a href="#">estimé</a> à</span>
+        <span class="sidebar-project__header-title">187 000€</span>
+        <button class="sidebar-project__header-like">
+        </button>
+    </div>
+    <div class="sidebar-project__container grid grid_col_2">
+        <div class="subtitle">
+            Planifier une visite
+        </div>
+        <a class="grid__child_justify_end" href="#">
+            Déjà 5 visites planifiées
+        </a>
+    </div>
+    <div class="sidebar-project__agenda">
+        {{> organisms-agenda }}
+    </div>
+    <div class="sidebar-project__container grid grid_col_2">
+        <div>
+            <label for="labeledInput">
+                Heure préférée
+            </label>
+            <input type="text" name="labeledInput" id="labeledInput">
+        </div>
+        <div>
+            <label for="labeledInput">
+                Nombre de personne
+            </label>
+            <input type="text" name="labeledInput" id="labeledInput">
+        </div>
+    </div>
+    <div class="sidebar-project__container">
+        <button class="button button_width_full">
+                Planifier la visite
+        </button>
+    </div>
+</div>

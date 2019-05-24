@@ -1,0 +1,24 @@
+<ul class="users-list">
+    <li class="users-list__item users-list__item_message user">
+        <img src="https://placeimg.com/400/400/people" alt="Kevin Palade" class="user__avatar">
+        <span class="user__context">Dernier message le {{day.short}} {{month.long}} {{year.long}}</span>
+        <span class="user__name">{{name.first}} {{name.last}}</span>
+        <div class="user__plan">
+            Visite le {{day.short}} {{month.long}} {{year.long}} à {{hour.long}}h{{minute.long}}
+        </div>
+        <div class="user__like"></div>
+        <div class="user__status user__status_online"></div>
+    </li>
+    {{# listitems.four }}
+    <li class="users-list__item user">
+        <img src="https://placeimg.com/400/400/people" alt="Kevin Palade" class="user__avatar">
+        <span class="user__context">Dernier message le {{day.short}} {{month.long}} {{year.long}}</span>
+        <span class="user__name">{{name.first}} {{name.last}}</span>
+        <div class="user__plan">
+            Visite le {{day.short}} {{month.long}} {{year.long}} à {{hour.long}}h{{minute.long}}
+        </div>
+        <div class="user__like"></div>
+        <div class="user__status"></div>
+    </li>
+    {{/ listitems.four }}
+</ul>

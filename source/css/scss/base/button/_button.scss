@@ -1,0 +1,166 @@
+.button {
+    min-height: pxToRem(48);
+    padding: calc((#{pxToRem(48)} - #{spToRem(14)}) / 2)
+    calc((#{pxToRem(48)} - #{spToRem(14)}));
+    min-width: spToRem(64);
+    line-height: 1;
+    text-align: center;
+    background: $colorPrimary;
+    color: rgba($color: white, $alpha: 0.84);
+    outline: none;
+    @include shadow(0);
+    @include transition;
+    border: none;
+    text-transform: uppercase;
+    border-radius: $globalRadius;
+    margin-bottom: $globalMarginBottom;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background: black;
+        opacity: 0;
+        border-radius: $globalRadius;
+        @include transition;
+    }
+    &:hover {
+        @include shadow(2, $colorPrimary);
+        &:after {
+            opacity: 0.12;
+        }
+    }
+    &_width {
+        &_full {
+            width: 100%;
+            display: block;
+        }
+    }
+    &_color {
+        &_white {
+            background: white;
+            color: $colorPrimary;
+            &:hover {
+                @include shadow(2);
+            }
+        }
+        &_blue {
+            background: $lightBlue;
+            color: $colorPrimary;
+            &:hover {
+                @include shadow(2);
+            }
+        }
+        &_red {
+            background: $colorSecondary;
+            color: white;
+            &:hover {
+                @include shadow(2, $colorSecondary);
+            }
+        }
+    }
+    &_shadow {
+        &,
+        &_1 {
+            @include shadow(1);
+            &:hover {
+                @include shadow(3);
+            }
+        }
+        &_2 {
+            @include shadow(2);
+            &:hover {
+                @include shadow(4);
+            }
+        }
+    }
+    &_hollow {
+        min-height: calc(#{pxToRem(48)} - #{$globalBorderWidth * 2});
+        padding: calc(
+        (#{pxToRem(48)} - #{spToRem(14)} - #{$globalBorderWidth * 2}) / 2
+        )
+        calc((#{pxToRem(48)} - #{spToRem(14)} - #{$globalBorderWidth * 2}));
+        min-width: spToRem(64);
+        border: $globalBorderWidth solid $colorPrimary;
+        background: transparent;
+        color: $colorPrimary;
+        font-weight: 600;
+        &.button {
+            // nothing here
+            &_color {
+                &_red {
+                    border-color: $colorDanger;
+                    color: $colorDanger;
+                }
+                &_white {
+                    border-color: white;
+                    color: white;
+                }
+            }
+        }
+    }
+    &_size {
+        &_big {
+            min-height: pxToRem(64);
+            padding: calc((#{pxToRem(64)} - #{spToRem(14)}) / 2)
+            calc((#{pxToRem(64)} - #{spToRem(14)}));
+        }
+        &_small {
+            min-height: pxToRem(36);
+            padding: calc((#{pxToRem(36)} - #{spToRem(14)}) / 2)
+            calc((#{pxToRem(36)} - #{spToRem(14)}));
+        }
+    }
+    &_link {
+        background: transparent;
+        color: $colorPrimary;
+        @include shadow(0);
+        border: none;
+        font-weight: 600;
+        &:after {
+            content: none;
+        }
+        &:hover {
+            @include shadow(0);
+            border: none;
+            text-decoration: underline;
+        }
+        &.button {
+            // nothing here
+            &_color {
+                &_red {
+                    color: $colorDanger;
+                }
+                &_white {
+                    color: white;
+                }
+            }
+        }
+    }
+    &:disabled {
+        background: $grey;
+        color: white;
+        opacity: 0.84;
+        @include shadow(0);
+        border: none;
+        cursor: not-allowed;
+        &:after {
+            content: none;
+        }
+        &:hover {
+            @include shadow(0);
+            border: none;
+        }
+    }
+    [class*="fa-"] {
+        @extend .fa;
+        margin-left: 0.5rem;
+        line-height: 0;
+    }
+}

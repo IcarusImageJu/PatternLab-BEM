@@ -1,0 +1,10 @@
+.titling {
+    margin-bottom: 2rem;
+    &__title {
+        @extend h6;
+    }
+    &__subtitle {
+        @extend .subtitle-1;
+        max-width: 70ch;
+    }
+}

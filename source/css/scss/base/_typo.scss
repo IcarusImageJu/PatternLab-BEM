@@ -1,0 +1,47 @@
+@mixin typo-primary(
+    $font-size: 1rem,
+    $font-weight: 400,
+    $color: $colorPrimary,
+    $line-height: 1.54,
+    $font-style: normal
+) {
+    font-family: $fontFamilyPrimary;
+    font-size: $font-size;
+    @if $font-weight==lighter {
+        font-weight: 300;
+    }
+    @if $font-weight !=lighter {
+        font-weight: $font-weight;
+    }
+    color: $color;
+    line-height: $line-height;
+    font-style: $font-style;
+}
+@mixin typo-secondary(
+    $font-size: 1rem,
+    $font-weight: 400,
+    $color: $colorPrimary,
+    $line-height: 1.54,
+    $font-style: normal
+) {
+    font-family: $fontFamilySecondary;
+    font-size: $font-size;
+    @if $font-weight==lighter {
+        font-weight: 300;
+    }
+    @if $font-weight !=lighter {
+        font-weight: $font-weight;
+    }
+    color: $color;
+    line-height: $line-height;
+    font-style: $font-style;
+}
+html {
+    font-family: "Avenir Next", sans-serif;
+}
+.typo {
+    font-family: $fontFamilyPrimary;
+    &_secondary {
+        font-family: $fontFamilySecondary;
+    }
+}

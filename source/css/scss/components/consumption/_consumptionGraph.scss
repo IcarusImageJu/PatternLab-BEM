@@ -1,0 +1,88 @@
+.consumption-graph{
+    margin-bottom: 2rem;
+    &_ges{
+        .consumption-graph{
+            @each $i, $color in $gesColors{
+                &__item_color_#{map_get($color,class)} {
+                    background: map_get($color, color);
+                    opacity: 0.3;
+                    &:after {
+                        background: linear-gradient(to bottom right, map_get($color, color) 50%, transparent 51%);
+                    }
+                    &:before {
+                        background: linear-gradient(to top right, map_get($color, color) 50%, transparent 51%);
+                    }
+                }
+            }
+
+            @each $i, $color in $gesColors{
+                &__item_size_#{map_get($color, class)} {
+                    $test: map_get($color, size) * 1rem;
+                    width: $test + 3rem;
+                }
+            }
+            &__item_selected{
+                opacity: 1;
+            }
+
+            @include breakpoint(tablet-landscape-up) {
+                @each $i, $color in $gesColors{
+                    &__item_size_#{map_get($color, class)} {
+                        $test: map_get($color, size) * 1rem;
+                        width: $test + 4rem;
+                    }
+                }
+            }
+        }
+    }
+
+    &_dpe{
+        .consumption-graph{
+            @each $i, $color in $dpeColors{
+                &__item_color_#{map_get($color,class)} {
+                    background: map_get($color, color);
+                    opacity: .3;
+                    &:after {
+                        background: linear-gradient(to bottom right, map_get($color, color) 50%, transparent 51%);
+                    }
+                    &:before {
+                        background: linear-gradient(to top right, map_get($color, color) 50%, transparent 51%);
+                    }
+                }
+            }
+
+            @each $i, $color in $dpeColors{
+                &__item_size_#{map_get($color, class)} {
+                    $test: map_get($color, size) * 1rem;
+                    width: $test + 3rem;
+                }
+            }
+
+            &__item_selected{
+                opacity: 1;
+            }
+
+            @include breakpoint(tablet-landscape-up) {
+                @each $i, $color in $gesColors{
+                    &__item_size_#{map_get($color, class)} {
+                        $test: map_get($color, size) * 1rem;
+                        width: $test + 4rem;
+                    }
+                }
+            }
+        }
+    }
+
+    &_size_small{
+        .consumption-item{
+            width: 2rem;
+            &__info{
+                display: none;
+            }
+            &__letter{
+                float: inherit;
+            }
+        }
+        
+    }
+}

@@ -1,0 +1,64 @@
+.sidebar-project {
+    @include shadow(2);
+    display: inline-block;
+    width: 100%;
+    margin-bottom: $globalMarginBottom;
+    &__container {
+        padding: 1rem;
+        & + & {
+            padding-top: 0;
+        }
+        &:last-child {
+            padding-bottom: 0;
+        }
+        &_header {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            grid-template-areas:
+            "context like"
+            "title like";
+            margin-bottom: $globalMarginBottom;
+            color:white;
+            background: $grey;
+        }
+    }
+    &__header-context {
+        grid-area: context;
+        @extend .subtitle;
+        a {
+            color: white;
+            font-weight: 600;
+        }
+    }
+    &__header-title {
+        grid-area: title;
+        @extend h5;
+        margin-bottom: 0;
+    }
+    &__header-like {
+        grid-area: like;
+        background: none;
+        color: white;
+        @extend .far, .fa-heart;
+        font-size: 1.75rem;
+        border: none;
+        outline: none;
+        box-shadow: none;
+        cursor: pointer;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        @include transition;
+        display: grid;
+        background: transparent;
+        justify-content: center;
+        align-items: center;
+        &:hover{
+            background: $red;
+            color:white;
+        }
+        &_active{
+            @extend .fa;
+        }
+    }
+}

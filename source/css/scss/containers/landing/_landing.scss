@@ -1,0 +1,24 @@
+.landing{
+    display: grid;
+    grid-gap: 4rem;
+    grid-row-gap: 0;
+    grid-template-areas:
+    "infos"
+    "sidebar"
+    "more";
+    @include breakpoint(tablet-landscape-up){
+        grid-template-columns: 3fr 2fr;
+        grid-template-areas:
+        "infos sidebar"
+        "more sidebar";
+    }
+    &__infos{
+        grid-area: infos;
+    }
+    &__sidebar{
+        grid-area: sidebar;
+    }
+    &__more{
+        grid-area: more;
+    }
+}

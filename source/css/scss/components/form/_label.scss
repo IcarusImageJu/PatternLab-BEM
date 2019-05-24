@@ -1,0 +1,11 @@
+label,
+.label {
+    @extend .caption;
+}
+.label {
+    &_size {
+        &_big {
+            font-size: spToRem(16);
+        }
+    }
+}

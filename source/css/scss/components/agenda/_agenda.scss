@@ -1,0 +1,31 @@
+.agenda {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: $globalMarginBottom;
+    background: white;
+    &__actions {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        align-items: center;
+    }
+    &__calendar {
+        display: block;
+    }
+    &__displayed-month {
+        justify-self: center;
+        @extend .body-2;
+    }
+    &__icon {
+        @extend .fa;
+        background: none;
+        border: none;
+        outline: none;
+        padding: 0.25rem 1rem;
+        &_prev {
+            @extend .fa-chevron-left;
+        }
+        &_next {
+            @extend .fa-chevron-right;
+        }
+    }
+}

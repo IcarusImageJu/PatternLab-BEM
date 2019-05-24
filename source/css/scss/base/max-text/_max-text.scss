@@ -1,0 +1,10 @@
+.max-text {
+    display: block;
+    text-align: center;
+    font-size: 1rem;
+    &__content {
+        display: inline-block;
+        text-align: left;
+        max-width: 70ch;
+    }
+}

@@ -1,0 +1,102 @@
+html {
+    font-weight: 400;
+    @include letterSpacing(0.5);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: $globalMarginBottom;
+}
+h1 {
+    @extend .typo_secondary;
+    font-weight: 300;
+    font-size: spToRem(96);
+    @include letterSpacing(-1.5);
+}
+h2 {
+    @extend .typo_secondary;
+    font-weight: 300;
+    font-size: spToRem(60);
+    @include letterSpacing(-0.5);
+}
+h3 {
+    @extend .typo_secondary;
+    font-weight: 400;
+    font-size: spToRem(48);
+    @include letterSpacing(0);
+}
+h4 {
+    @extend .typo_secondary;
+    font-weight: 400;
+    font-size: spToRem(34);
+    @include letterSpacing(0.25);
+}
+h5 {
+    @extend .typo_secondary;
+    font-weight: 400;
+    font-size: spToRem(24);
+    @include letterSpacing(0);
+}
+h6 {
+    @extend .typo_secondary;
+    font-weight: 500;
+    font-size: spToRem(20);
+    @include letterSpacing(0.15);
+}
+.subtitle,
+.subtitle-1,
+[subtitle],
+[subtitle-1] {
+    font-weight: 400;
+    font-size: spToRem(16);
+    @include letterSpacing(0.15);
+    margin-bottom: $globalMarginBottom / 2;
+}
+.subtitle-2,
+[subtitle-2] {
+    font-weight: 500;
+    font-size: spToRem(14);
+    @include letterSpacing(0.1);
+    margin-bottom: $globalMarginBottom / 2;
+}
+.body,
+.body-1,
+[body],
+[body-1] {
+    font-weight: 400;
+    font-size: spToRem(16);
+    @include letterSpacing(0.5);
+}
+.body-2,
+[body-2] {
+    font-weight: 400;
+    font-size: spToRem(14);
+    @include letterSpacing(0.25);
+}
+.button,
+[button] {
+    font-weight: 500;
+    font-size: spToRem(14);
+    @include letterSpacing(0.75);
+}
+.caption,
+[caption] {
+    font-weight: 400;
+    font-size: spToRem(12);
+    @include letterSpacing(0.4);
+}
+.overline,
+[overline] {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: spToRem(10);
+    @include letterSpacing(1.5);
+    margin-bottom: $globalMarginBottom / 4;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}

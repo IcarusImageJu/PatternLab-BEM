@@ -1,0 +1,112 @@
+.hero-project {
+    margin-top: -2rem;
+    display: grid;
+    width: 100%;
+    min-height: 75vh;
+    height: calc(100vw / 16 * 9);
+    max-height: calc(100vh - 10rem);
+    grid-gap: 1rem;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas:
+    "share"
+    "done"
+    "user"
+    "pictures";
+    @include breakpoint(tablet-portrait-up) {
+        grid-template-rows: auto 1fr auto;
+    }
+    @include breakpoint(tablet-landscape-up) {
+        grid-template-rows: auto 1fr;
+        grid-template-areas:
+        "done share"
+        "user pictures";
+    }
+    .cover__img {
+        opacity: 1;
+    }
+    &__share {
+        grid-area: share;
+        padding: 2rem 2rem 0 0;
+        justify-self: end;
+        align-self: start;
+        .button {
+            margin-bottom: 1rem;
+            @extend .button_size_small;
+        }
+        @include breakpoint(phone-only) {
+            padding: 1rem 1rem 0 0;
+            margin-bottom: 0;
+        }
+    }
+    &__done {
+        grid-area: done;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        padding-left: 2rem;
+    }
+    &__user {
+        grid-area: user;
+        display: none;
+        @include breakpoint(tablet-portrait-up) {
+            display: block;
+            padding: 0 0 2rem 2rem;
+            justify-self: start;
+            align-self: end;
+        }
+    }
+    &__pictures {
+        grid-area: pictures;
+        justify-self: end;
+        align-self: end;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        font-size: 0;
+        text-align: right;
+    }
+    &__pictures-item {
+        height: 4rem;
+        width: 4rem;
+        @include breakpoint(tablet-portrait-up) {
+            height: 5rem;
+            width: 5rem;
+        }
+        @include breakpoint(tablet-landscape-up) {
+            height: 6rem;
+            width: 6rem;
+        }
+        display: inline-block;
+        cursor: pointer;
+        &:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            background: $colorPrimary;
+            opacity: 0;
+            @include transition;
+            z-index: 2;
+        }
+        &:hover {
+            &:after {
+                opacity: 0.24;
+            }
+        }
+    }
+    &__pictures-item-more {
+        @extend [button];
+        position: absolute;
+        background: transparentize($color: $red, $amount: 0.24);
+        color: white;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0.25rem;
+    }
+}

@@ -1,0 +1,21 @@
+<div class="visit">
+    <div class="visit__header">
+        {{> organisms-headerConnected }}
+    </div>
+    <div class="visit__next">
+        {{> organisms-nextVisit }}
+    </div>
+    <div class="visit__actions">
+        <button onclick="this.parentNode.parentNode.classList.toggle('visit_active_users')" class="visit__action visit__action_users">Planner</button>
+        <button onclick="this.parentNode.parentNode.classList.toggle('visit_active_infos')" class="visit__action visit__action_infos">Infos</button>
+    </div>
+    <div class="visit__users">
+        {{> organisms-visitUsersList }}
+    </div>
+    <div class="visit__conversation">
+        {{> organisms-conversation }}
+    </div>
+    <div class="visit__infos">
+        {{> organisms-infosVisit }}
+    </div>
+</div>

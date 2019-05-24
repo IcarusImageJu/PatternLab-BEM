@@ -1,0 +1,16 @@
+.pictures-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
+    padding: 0;
+    @include breakpoint(phone-only) {
+        padding: 0 1rem;
+    }
+    &__item {
+        display: inline-block;
+        padding-right: 1rem;
+    }
+}

@@ -1,0 +1,91 @@
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: auto repeat(6, 3rem);
+    background: rgba($color: $lightBlue, $alpha: 0.12);
+    &__item {
+        @extend .caption;
+        padding: 0.25rem 0.125rem;
+        position: relative;
+        // display: flex;
+        // align-items: flex-start;
+        // justify-content: flex-start;
+        appearance: none;
+        background: white;
+        border: 1px solid rgba($color: $lightBlue, $alpha: 0.24);
+        &_day {
+            background: transparent;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        &_passed {
+            background: transparent;
+        }
+        &_prev {
+            background: transparent;
+            outline: none;
+            color: rgba($color: $colorPrimary, $alpha: 0.54);
+        }
+        &_next {
+            background: transparent;
+            outline: none;
+            color: rgba($color: $colorPrimary, $alpha: 0.54);
+        }
+        &_today {
+            .calendar {
+                // nothing here
+                &__content {
+                    position: relative;
+                    &::after {
+                        position: absolute;
+                        display: inline-block;
+                        content: "";
+                        top: -0.125rem;
+                        left: -0.125rem;
+                        right: -0.125rem;
+                        bottom: -0.125rem;
+                        border-radius: 1rem;
+                        background: rgba($color: $blue, $alpha: 0.12);
+                    }
+                }
+            }
+        }
+        &_closed {
+            background: rgba($color: $red, $alpha: 0.24);
+        }
+        &_select {
+            cursor: pointer;
+            text-align: left;
+            &:hover {
+                background: rgba($color: $blue, $alpha: 0.12);
+            }
+            // Weird fix for align content to top
+            &:after {
+                content: "";
+                display: inline-block;
+                vertical-align: top;
+                height: 100%;
+            }
+        }
+        &_selected {
+            // background: rgba($color: $green, $alpha: .54);
+            background: $green;
+            color: white;
+            &:hover {
+                background: $green;
+            }
+        }
+    }
+    &__content {
+        display: inline-block;
+        vertical-align: top;
+    }
+    &__planned {
+        height: 0.25rem;
+        width: 0.25rem;
+        border-radius: 1rem;
+        background: $blue;
+        display: inline-block;
+        margin-left: 0.125rem;
+    }
+}

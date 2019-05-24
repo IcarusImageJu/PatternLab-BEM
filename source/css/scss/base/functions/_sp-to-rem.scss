@@ -1,0 +1,3 @@
+@function spToRem($spSize) {
+    @return ($spSize/$globalTypoSize) + rem;
+}

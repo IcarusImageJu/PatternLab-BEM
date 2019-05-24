@@ -1,0 +1,71 @@
+.paginate {
+	margin-bottom: 2rem;
+	display: grid;
+	grid-template-columns: 1fr auto;
+	align-items: center;
+	grid-gap: 1rem;
+
+	&__result {
+		@extend .label;
+	}
+
+	&__nav {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: grid;
+		grid-auto-flow: column;
+		align-items: stretch;
+	}
+
+	&__action {
+		padding: .25rem .5rem;
+		height: 100%;
+		font-weight: bold;
+		cursor: pointer;
+		background: none;
+		border: none;
+		box-shadow: none;
+		font-size: .875rem;
+
+		&:hover {
+			text-decoration: underline;
+		}
+
+		&_start {
+			@extend .fa, .fa-angle-double-left;
+		}
+
+		&_prev {
+			@extend .fa, .fa-angle-left;
+		}
+
+		&_current {
+			pointer-events: none;
+			font-weight: normal;
+			text-decoration: underline;
+		}
+
+		&_ellips {
+			pointer-events: none;
+			font-weight: normal;
+
+			&:after {
+				content: '...';
+			}
+		}
+
+		&_next {
+			@extend .fa, .fa-angle-right;
+		}
+
+		&_end {
+			@extend .fa, .fa-angle-double-right;
+		}
+
+		&_disabled {
+			pointer-events: none;
+			opacity: .5;
+		}
+	}
+}

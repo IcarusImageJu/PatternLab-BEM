@@ -1,0 +1,33 @@
+<div class="sidebar-project">
+    {{> organisms-userBig }}
+    <div class="sidebar-project__container grid grid_col_2">
+        <div class="subtitle">
+            Planifier un rendez-vous
+        </div>
+        <a class="grid__child_justify_end" href="#">
+            David est en ligne, créez votre profil maintenant ?
+        </a>
+    </div>
+    <div class="sidebar-project__agenda">
+        {{> organisms-agenda }}
+    </div>
+    <div class="sidebar-project__container grid grid_col_2">
+        <div>
+            <label for="labeledInput">
+                Heure préférée
+            </label>
+            <input type="text" name="labeledInput" id="labeledInput">
+        </div>
+    </div>
+    <div class="sidebar-project__container">
+        <label for="labeledInput">
+            Adresse email
+        </label>
+        <input type="email" name="labeledInput" id="labeledInput">
+    </div>
+    <div class="sidebar-project__container">
+        <button class="button button_width_full">
+                Prendre rendez-vous
+        </button>
+    </div>
+</div>

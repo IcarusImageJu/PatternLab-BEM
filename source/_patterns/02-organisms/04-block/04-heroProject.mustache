@@ -1,0 +1,40 @@
+<div class="cover hero-project">
+    <img src="https://placeimg.com/1500/1500/arch" alt="" class="hero-project__img cover__img">
+    <div class="hero-project__done">
+        {{> organisms-done }}
+    </div>
+    <div class="hero-project__share">
+        <div class="dropdown">
+            <div class="dropdown__context" onclick="this.parentNode.classList.toggle('dropdown_active')">
+                <button class="button button_color_white button_shadow_1">Partager</button>
+            </div>
+            <div class="dropdown__content">
+                <ul class="dropdown__list">
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Linkedin</a></li>
+                    <li><a href="#">Email</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="hero-project__user">
+        {{> organisms-userSimplified }}
+    </div>
+    <ul class="hero-project__pictures">
+        <li class="cover hero-project__pictures-item">
+            <img class="cover__img" src="https://placeimg.com/100/100/arch" alt="">
+        </li>
+        <li class="cover hero-project__pictures-item">
+            <img class="cover__img" src="https://placeimg.com/100/100/arch" alt="">
+        </li>
+        <li class="cover hero-project__pictures-item">
+            <img class="cover__img" src="https://placeimg.com/100/100/arch" alt="">
+        </li>
+        <li class="cover hero-project__pictures-item">
+            <span class="hero-project__pictures-item-more">
+                +3 autres
+            </span>
+            <img class="cover__img" src="https://placeimg.com/100/100/arch" alt="">
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,42 @@
+<li class="table__row">
+    <div class="table-row">
+        <div class="table-row__item">nom critère</div>
+        <div class="table-row__item">description</div>
+        <div class="table-row__item">
+            <div class="table-row-input">
+                <input type="text" class="input_small"/>
+            </div>
+        </div>
+        <div class="table-row__item">
+            <div class="table-row-input">
+                <input type="text" class="input_small"/>
+            </div>
+        </div>
+        <div class="table-row__item">
+            <div class="table-row-input">
+                <div class="select select_small">
+                    <input class="select__input" hidden name="select" type="text">
+                    <div class="select__value" onclick="this.parentNode.classList.add('select_active')">
+                        <span>2</span><i class="select__icon"></i>
+                    </div>
+                    <ul class="select__list" onclick="this.parentNode.classList.remove('select_active')">
+                        <li class="select__list-item">1</li>
+                        <li class="select__list-item select__list-item_active">2</li>
+                        <li class="select__list-item">3</li>
+                        <li class="select__list-item">4</li>
+                        <li class="select__list-item">5</li>
+                        <li class="select__list-item">6</li>
+                        <li class="select__list-item">7</li>
+                        <li class="select__list-item">8</li>
+                        <li class="select__list-item">9</li>
+                        <li class="select__list-item">10</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="table-row__item table-row__item_actions">
+            <button class="table-row__action table-row__action_edit"> Editer </button>
+            <Button class="table-row__action table-row__action_delete"> Supprimer </Button>
+        </div>
+    </div>
+</li>

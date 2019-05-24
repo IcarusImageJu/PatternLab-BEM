@@ -1,0 +1,16 @@
+.newsletter{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    @extend .container;
+    @extend .container_content;
+    grid-gap: 1rem;
+    &__title {
+        @extend .grid__child_col_5, .grid__child_col-lg_2;
+    }
+    &__input {
+        @extend .grid__child_col_5, .grid__child_col-md_3, .grid__child_col-lg_2, .grid__child_align_end;
+    }
+    &__button {
+        @extend .grid__child_col_5, .grid__child_col-md_2, .grid__child_col-lg_1, .grid__child_align_end;
+    }
+}

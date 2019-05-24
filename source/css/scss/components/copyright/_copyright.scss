@@ -1,0 +1,12 @@
+.grecaptcha-badge{
+    display: none;
+}
+
+.block-captcha{
+    text-align: center;
+    padding: 15px;
+    display: block;
+    font-size: 11px;
+    color: $white;
+    background-color: $darkRed;
+}

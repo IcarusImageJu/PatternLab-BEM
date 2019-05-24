@@ -1,0 +1,134 @@
+.select {
+    position: relative;
+    @include scrollbar;
+    &__input {
+        display: none;
+    }
+    &__placeholder {
+        @extend input;
+        position: absolute;
+        border: none !important;
+        background: none;
+        top: 0;
+        padding-right: 3rem;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    &__value {
+        @extend input;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        cursor: pointer; 
+        padding-right: 3rem;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    &__icon {
+        @extend .fa, .fa-chevron-down;
+        // grid-column: 3 / 4;
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 1rem;
+    }
+    &__list {
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        max-height: 15rem;
+        background: white;
+        @include shadow(2);
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        overflow-y: auto;
+        display: none;
+    }
+    &__list-item {
+        padding: 1rem 1rem;
+        border-bottom: $globalBorderWidth solid $lightBlue;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        cursor: pointer;
+        @extend .body;
+        &:hover{
+            background: rgba($color: $lightBlue, $alpha: 0.5);
+        }
+        &_hovered{
+            background: rgba($color: $lightBlue, $alpha: 0.5);
+        }
+        &_active{
+            background: $lightBlue;
+        }
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+    &_active {
+        .select {
+            // nothing here
+            &__list {
+                display: block;
+            }
+        }
+    }
+
+    &_autocomplete{
+        .select{
+            //nothing here
+            &__list{
+                top: calc(100% - 2rem);
+            }
+        }
+    }
+    &_small{
+        cursor: pointer;
+        .select{
+            //nothing here
+            &__value {
+                @extend .input_small;
+                display: grid;
+                grid-template-columns: auto 1fr auto;
+                cursor: pointer; 
+                padding-right: 2rem;
+            }
+            &__placeholder{
+                @extend .input_small;
+                padding-right: 2rem;
+            }
+            &__icon {
+                padding: 0.5rem;
+            }
+            &__list-item{
+                height: pxToRem(30);
+                padding: calc((#{pxToRem(30)} - #{spToRem(16)}) / 2);
+                font-size: spToRem(14);
+            }
+            &_autocomplete{
+                &__list{
+                    top: calc(100% - 1rem);
+                }
+
+                .input{
+                    @extend .input_small;
+                }
+            }
+        }
+    }
+
+    &_disabled{
+        .select{
+            //nothing here
+            &__value{
+                background: rgb(235, 235, 228);
+                cursor: context-menu;
+            }
+        }
+    }
+
+    
+}

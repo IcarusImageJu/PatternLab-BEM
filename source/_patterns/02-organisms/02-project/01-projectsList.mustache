@@ -1,0 +1,43 @@
+<ul class="projects-list">
+    <li class="projects-list__item">
+        <article class="project">
+            <a href="#" class="project__link">
+                <div class="project__user">
+                    {{> organisms-userSimplified }}
+                </div>
+                <div class="project__content">
+                    <img class="project__img" src="https://placeimg.com/640/360/arch" alt="Ma maison">
+                    <object data="" type="">
+                        <button class="project__like project__like_active">
+                            <i></i>
+                        </button>
+                    </object>
+                </div>
+                <div class="project__match">
+                    <h1 class="overline">
+                        Appartement à Paris
+                    </h1>
+                    <div class="subtitle-1">
+                        110.000€ à acheter
+                    </div>
+                    <div class="caption">
+                        3 visites planifiées
+                    </div>
+                </div>
+            </a>
+        </article>
+    </li>
+    <li class="projects-list__item">
+        {{> organisms-profile}}
+    </li>
+    {{# listitems.six }}
+    <li class="projects-list__item">
+        {{> organisms-project }}
+    </li>
+    {{/ listitems.six }}
+    <li class="projects-list__item projects-list__item_next">
+        <article class="project project_next">
+            <i class="fa fa-angle-right"></i>
+        </article>
+    </li>
+</ul>

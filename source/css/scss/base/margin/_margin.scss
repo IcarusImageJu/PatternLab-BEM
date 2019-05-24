@@ -1,0 +1,8 @@
+.margin {
+    &_bottom {
+        margin-bottom: $globalMarginBottom;
+    }
+    &_top {
+        margin-top: $globalMarginBottom;
+    }
+}

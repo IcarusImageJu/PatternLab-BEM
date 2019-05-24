@@ -1,0 +1,17 @@
+<div class="grid grid_col_2">
+    <div class="grid__child grid__child_col_1 grid__child_col-sm_2">
+        <div class="select select_small">
+            <input class="select__input" hidden name="select" type="text">
+            <div class="select__value" onclick="this.parentNode.classList.add('select_active')">
+                <span>2</span><i class="select__icon"></i>
+            </div>
+            <ul class="select__list" onclick="this.parentNode.classList.remove('select_active')">
+                <li class="select__list-item">Id</li>
+                <li class="select__list-item select__list-item_active">Firstname</li>
+            </ul>
+        </div>
+    </div>
+    <div class="grid__child grid__child_col_1 grid__child_col-sm_2">
+        <input class="input_small" type="text"/>
+    </div>
+</div>

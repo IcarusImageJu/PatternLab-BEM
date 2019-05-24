@@ -1,0 +1,83 @@
+{{> organisms-headerConnected }}
+<div class="container container_content">
+    {{> organisms-titling }}
+    <div class="grid grid_overflow grid_col_3 margin_bottom">
+        {{# listitems.two }} {{> organisms-projectOwner }} {{/ listitems.two }}
+    </div>
+
+    <h5>Mon profil</h5>
+    <div class="subtitle-2">
+        Informations générales
+    </div>
+    <div class="margin_bottom">
+        {{> organisms-userSimplified }}
+    </div>
+    <div class="grid grid_col_6">
+        <div class="grid__child_col_6">
+            <label for="labeledInput">
+                Numéro de registre national
+            </label>
+            <input type="text" name="labeledInput" id="labeledInput">
+        </div>
+        <div class="grid__child_col_2">
+            <label for="labeledInput">
+                Genre
+            </label>
+            <input type="text" name="labeledInput" id="labeledInput">
+        </div>
+        <div class="grid__child_col_2">
+            <label for="labeledInput">
+                Nationalité
+            </label>
+            <input type="text" name="labeledInput" id="labeledInput">
+        </div>
+        <div class="grid__child_col_2">
+            <label for="labeledInput">
+                Status
+            </label>
+            <input type="text" name="labeledInput" id="labeledInput">
+        </div>
+    </div>
+    <div class="subtitle-2">
+        Documents éléctroniques
+    </div>
+    <div class="subtitle-2">
+        Préférences projet
+    </div>
+    <ul class="grid grid_col_4 grid_col-sm_1 grid_col-md_2 grid_col-lg_3 list list_no_style list_no_margin list_no_padding list_link">
+        <li>
+            <a href="#">
+                <i class="fa fa-phone"></i> Raccordement Téléphone
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fab fa-internet-explorer"></i> Fibre optique
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-lightbulb"></i> Plus lumineux
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-plus"></i> Plus grand
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-minus"></i> Plus petit
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-euro-sign"></i> Plus cher
+            </a>
+        </li>
+    </ul>
+    <div class="subtitle-2">
+        Mandat d'exclusivité
+    </div>
+    {{> organisms-downloads }}
+</div>

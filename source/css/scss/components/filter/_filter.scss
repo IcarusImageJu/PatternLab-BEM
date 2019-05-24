@@ -1,0 +1,51 @@
+.filter {
+    background: $lightBlue;
+    padding: 0.5rem 2rem 0 2rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    margin-top: -2rem;
+    grid-gap: 1rem;
+    margin-bottom: $globalMarginBottom;
+    @include breakpoint(phone-only) {
+        padding: 0.5rem 1rem 0;
+        grid-template-columns: 1fr;
+    }
+    .button {
+        margin-bottom: 0.5rem;
+        @include breakpoint(phone-only) {
+            width: 100%;
+            display: block;
+        }
+    }
+    .select {
+        display: inline-block;
+        &__value{
+            margin-bottom: 0.5rem;
+            background: $white;
+            border: none;
+        }
+        &__holder{
+            margin-bottom: 0px;
+        }
+        @include breakpoint(phone-only){
+            min-width: inherit;
+            width: 100%;
+            display: block;
+        }
+    }
+    input{
+        border: none;
+        margin-bottom: 0.5rem;
+        &:focus{
+            border: none;
+        }
+    }
+    &__quick {
+    }
+    &__all {
+        justify-self: end;
+        @include breakpoint(phone-only) {
+            justify-self: normal;
+        }
+    }
+}

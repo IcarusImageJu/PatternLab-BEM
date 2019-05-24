@@ -1,0 +1,40 @@
+.main-search {
+    position: relative;
+    &__input {
+        border-radius: 10rem;
+        padding-right: pxToRem(48);
+    }
+    &__button {
+        border: none;
+        outline: none;
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        border-radius: 50%;
+        background: $lightBlue;
+        width: calc(#{pxToRem(48)} - 8px);
+        height: calc(#{pxToRem(48)} - 8px);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        cursor: pointer;
+        &:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            background: black;
+            opacity: 0;
+            border-radius: 50%;
+            @include transition;
+        }
+        &:hover {
+            &:after {
+                opacity: 0.12;
+            }
+        }
+    }
+}

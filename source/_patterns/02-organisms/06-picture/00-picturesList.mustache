@@ -1,0 +1,14 @@
+<div class="grid grid_col_6">
+    <div class="droppable grid__child grid__child_col_1 grid__child_col-sm_6">
+        <div class="pictures-list__item">
+            {{> organisms-upload }}
+        </div>
+    </div>
+    <ul class="pictures-list grid__child grid__child_col_5 grid__child_col-sm_6">
+        {{# listitems.six }}
+            <li class="pictures-list__item">
+                {{> organisms-picture }}
+            </li>
+        {{/ listitems.six }}
+    </ul>
+</div>

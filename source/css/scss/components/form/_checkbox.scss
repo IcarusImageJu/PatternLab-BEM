@@ -1,0 +1,62 @@
+.checkbox {
+    height: pxToRem(48);
+    width: pxToRem(48);
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    &__feedback {
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-around;
+        border: $inputBorderWidth solid $inputBorderColor;
+        border-radius: calc(#{$globalRadius} / 2);
+        width: pxToRem(24);
+        height: pxToRem(24);
+        background: transparent;
+        &:after {
+            content: "";
+            display: inline;
+            width: 80%;
+            height: 80%;
+            background: transparent;
+            border-radius: calc(#{$globalRadius} / 3);
+            @include transition;
+        }
+    }
+    &__input {
+        display: none;
+        &:checked {
+            & + .checkbox__feedback {
+                &:after {
+                    background: $inputBorderColor;
+                }
+            }
+        }
+    }
+    &_radio {
+        .checkbox {
+            // nothing here
+            &__feedback {
+                border-radius: 50%;
+                &:after {
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+    &_disabled{
+        .checkbox{
+            //nothing here
+            &__input {
+                display: none;
+                &:checked {
+                    & + .checkbox__feedback {
+                        &:after {
+                            background: rgb(235, 235, 228);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

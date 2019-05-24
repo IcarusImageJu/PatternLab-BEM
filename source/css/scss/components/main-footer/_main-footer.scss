@@ -1,0 +1,94 @@
+.main-footer {
+    padding: 4rem 2rem 4rem 2rem;
+    margin-top: 2rem;
+    background: $darkRed;
+    color: white;
+    display: grid;
+    grid-gap: 1rem;
+    @include breakpoint(phone-only) {
+        padding: 4rem 1rem 8rem 1rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "logo socials"
+        "title1 title2"
+        "nav1 nav2"
+        "title3 ."
+        "nav3 .";
+    }
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "logo . socials"
+    "title1 title2 title3"
+    "nav1 nav2 nav3";
+    @include breakpoint(tablet-landscape-up) {
+        grid-template-columns: 10% 1fr 1fr 1fr 20%;
+        grid-template-areas:
+        "logo title1 title2 title3 socials"
+        ". nav1 nav2 nav3 .";
+    }
+    &__logo {
+        grid-area: logo;
+        align-self: end;
+        justify-self: start;
+        @include breakpoint(tablet-landscape-up) {
+            justify-self: end;
+        }
+        svg {
+            fill: white;
+            height: 3rem;
+        }
+        img {
+            height: 3rem;
+        }
+    }
+    &__title {
+        @extend h6;
+        align-self: end;
+        &_advices {
+            grid-area: title1;
+        }
+        &_projects {
+            grid-area: title2;
+        }
+        &_who {
+            grid-area: title3;
+        }
+    }
+    &__nav {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        &_advices {
+            grid-area: nav1;
+        }
+        &_projects {
+            grid-area: nav2;
+        }
+        &_who {
+            grid-area: nav3;
+        }
+    }
+    &__link {
+        color: white;
+        text-decoration: none;
+        padding: 0.25rem 0;
+        display: block;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    &__socials {
+        align-self: end;
+        justify-self: start;
+        grid-area: socials;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        * {
+            display: inline-block;
+            font-size: 2rem;
+            color: white;
+            padding: 0 .1rem;
+        }
+    }
+}

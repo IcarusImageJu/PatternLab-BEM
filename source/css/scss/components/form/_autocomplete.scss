@@ -1,0 +1,119 @@
+.autocomplete {
+    position: relative;
+    @include scrollbar;
+    &__list {
+        z-index: 2;
+        position: absolute;
+        top: calc(100% - 2rem);
+        left: 0;
+        right: 0;
+        max-height: 15rem;
+        background: white;
+        @include shadow(2);
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        overflow-y: auto;
+        display: none;
+    }
+    &__list-item {
+        padding: 1rem 1rem;
+        border-bottom: $globalBorderWidth solid $lightBlue;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        cursor: pointer;
+        @extend .body;
+        &:hover{
+            background: rgba($color: $lightBlue, $alpha: 0.5);
+        }
+        &_hovered{
+            background: rgba($color: $lightBlue, $alpha: 0.5);
+        }
+        &_active{
+            background: $lightBlue;
+        }
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+    &__error{
+        color: $colorDanger;
+        font-weight: 500;
+    }
+    &__input{
+        &+.autocomplete{
+            &__error{
+                position: absolute;
+                top: pxToRem(48);
+                font-size: spToRem(16);
+                left: 0;
+                width: 100%;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+        }
+    }
+    &_active {
+        .autocomplete {
+            // nothing here
+            &__list {
+                display: block;
+            }
+        }
+    }
+    &_error{
+        .autocomplete{
+            &__input{
+                border: $inputBorderWidth solid $colorDanger;
+                color: $colorDanger;
+                
+            }
+        }
+    }
+    &_small{
+        cursor: pointer;
+        .autocomplete{
+            //nothing here
+            &__input{
+                @extend .input_small;
+            }
+            &__list{
+                top: calc(100% - 1rem);
+            }
+            &__list-item{
+                height: pxToRem(30);
+                padding: calc((#{pxToRem(30)} - #{spToRem(16)}) / 2);
+                font-size: spToRem(14);
+                left: 0;
+                width: 100%;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+            &__input{
+                &+.autocomplete{
+                    &__error{
+                        position: absolute;
+                        top: pxToRem(30);
+                        font-size: spToRem(14);
+                    }
+                }
+            }
+        }
+    }
+
+    
+
+    &_disabled{
+        .autocomplete{
+            //nothing here
+            &__value{
+                background: rgb(235, 235, 228);
+                cursor: context-menu;
+            }
+        }
+    }
+
+    
+}

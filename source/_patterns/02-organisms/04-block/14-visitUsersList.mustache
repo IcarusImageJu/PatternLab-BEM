@@ -1,0 +1,38 @@
+<ul class="collapse-list">
+    <li class="collapse-list__item collapse-list__item_active">
+        <button class="button button_link collapse-list__button" onclick="this.parentNode.classList.toggle('collapse-list__item_active')">
+            à planifier (3)
+            <i class="collapse-list__icon"></i>
+        </button>
+        <div class="collapse-list__content">
+            {{> organisms-usersList }}
+        </div>
+    </li>
+    <li class="collapse-list__item collapse-list__item_active">
+        <button class="button button_link collapse-list__button" onclick="this.parentNode.classList.toggle('collapse-list__item_active')">
+            Planifiées (4)
+            <i class="collapse-list__icon"></i>
+        </button>
+        <div class="collapse-list__content">
+            {{> organisms-usersList }}
+        </div>
+    </li>
+    <li class="collapse-list__item">
+        <button class="button button_link collapse-list__button" onclick="this.parentNode.classList.toggle('collapse-list__item_active')">
+            Passées (3)
+            <i class="collapse-list__icon"></i>
+        </button>
+        <div class="collapse-list__content">
+            {{> organisms-usersList }}
+        </div>
+    </li>
+    <li class="collapse-list__item">
+        <button class="button button_link collapse-list__button" onclick="this.parentNode.classList.toggle('collapse-list__item_active')">
+            Archivées (2)
+            <i class="collapse-list__icon"></i>
+        </button>
+        <div class="collapse-list__content">
+            {{> organisms-usersList }}
+        </div>
+    </li>
+</ul>

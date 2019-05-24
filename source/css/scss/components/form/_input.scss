@@ -1,0 +1,75 @@
+#{$all-text-inputs} {
+    border: $inputBorderWidth solid $inputBorderColor;
+    border-radius: $globalRadius;
+    height: pxToRem(48);
+    padding: calc((#{pxToRem(48)} - #{spToRem(16)}) / 2);
+    width: 100%;
+    font-weight: 500;
+    font-size: spToRem(16);
+    outline: none;
+    @include transition;
+    @include shadow(0);
+    margin-bottom: $globalMarginBottom;
+}
+#{$all-text-inputs-hover} {
+    @include shadow(1);
+}
+#{$all-text-inputs-active} {
+    border: $inputBorderWidth solid transparentize($colorPrimary, 0.54);
+}
+#{$all-text-inputs-focus} {
+    border: $inputBorderWidth solid $grey;
+}
+#{$all-text-inputs-invalid} {
+    border: $inputBorderWidth solid $colorDanger;
+    color: $colorDanger;
+}
+.input-box{
+    position: relative;
+}
+.input{
+    &__error{
+        color: $colorDanger;
+        font-weight: 500;
+    }
+    &+.input{
+        &__error{
+            position: absolute;
+            top: pxToRem(48);
+            font-size: spToRem(16);
+            left: 0;
+            width: 100%;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+    }
+    &_small{
+        height: pxToRem(30);
+        padding: calc((#{pxToRem(30)} - #{spToRem(16)}) / 2);
+        font-size: spToRem(14);
+        margin-bottom: 1rem;
+        &+.input{
+            &__error{
+                position: absolute;
+                top: pxToRem(30);
+                font-size: spToRem(14);
+                left: 0;
+                width: 100%;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+        }
+    }
+    &_error{
+        border: $inputBorderWidth solid $colorDanger;
+        color: $colorDanger;
+    }
+
+}
+input[type=text]::placeholder,
+input[type=number]::placeholder{
+    color: black;
+}
+

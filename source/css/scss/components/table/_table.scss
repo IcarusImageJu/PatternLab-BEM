@@ -1,0 +1,121 @@
+.table {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-auto-flow: row;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	background: white;
+	margin-bottom: 1rem;
+
+	@include shadow(1);
+
+	&__row {
+		border-bottom: 1px solid material-color('grey', '200');
+		list-style-type: none;
+
+		// &_head {
+		// 	border-bottom: 1px solid material-color("grey", "300");
+		// }
+	}
+
+	&_mode {
+
+		// &_list{
+
+		// }
+
+		&_card {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+			grid-gap: 1rem;
+			justify-content: start;
+
+			@include shadow(0);
+
+			.table {
+				// nothing here
+
+				&__row {
+					border: 1px solid material-color('grey', '100');
+
+					@include shadow(1);
+
+					&_head {
+						display: none;
+					}
+				}
+			}
+
+			.table-row {
+				grid-auto-flow: row;
+				grid-gap: .25rem;
+				padding: .5rem 0 0;
+				// position: relative;
+				// @extend %pop;
+
+				&__item {
+					padding: 0 .5rem;
+
+					// &_title{
+
+					// }
+
+					&_actions {
+						padding: .5rem .5rem 0 .5rem;
+						background-color: material-color('grey', '200');
+						grid-auto-flow: column;
+						display: grid;
+						justify-content: space-between;
+					}
+				}
+
+				&__action {
+					// @extend .button_size_tiny, .button_margin_tiny;
+
+					&_edit {
+						@extend .button_color_blue;
+					}
+
+					&_delete {
+						@extend .button_link;
+					}
+
+					&_settings {
+						text-align: left;
+					}
+				}
+			}
+		}
+	}
+
+	&_sortable {
+
+		.table {
+			// nothing here
+		}
+
+		.table-head {
+
+			&__item {
+				cursor: pointer;
+
+				&:after {
+					padding-left: .25rem;
+
+					@extend .fa;
+
+					content: '\f0dc';
+				}
+
+				&_actions {
+					pointer-events: none;
+
+					&:after {
+						content: none;
+					}
+				}
+			}
+		}
+	}
+}

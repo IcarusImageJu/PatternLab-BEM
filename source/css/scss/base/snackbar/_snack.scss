@@ -1,0 +1,75 @@
+.snack {
+	display: grid;
+	grid-template-areas:
+ 		'title close'
+		'infos infos';
+	grid-template-columns: 1fr 2rem;
+	background: white;
+	@include shadow();
+	overflow: hidden;
+	grid-gap: .25rem;
+	padding: .25rem;
+	position: relative;
+
+	&__title {
+		grid-area: title;
+
+		@extend .subtitle;
+
+		margin-bottom: 0;
+		font-weight: bold;
+	}
+
+	&__infos {
+		grid-area: infos;
+
+		@extend .body-2;
+
+		.button {
+			// @extend .button_size_tiny, .button_no_margin;
+		}
+	}
+
+	&__close {
+		grid-area: close;
+
+		@extend .fa, .fa-times;
+
+		background: none;
+		border: none;
+		box-shadow: none;
+		outline: none;
+		opacity: .75;
+		font-size: .8rem;
+		cursor: pointer;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	&_color {
+		@each $i, $color in $colorsTooltip {
+
+			&_#{map_get($color,class)} {
+				$bgColor: map_get($color, first);
+				$txtColor: transparentize(map_get($color, second), .16);
+
+				background: $bgColor;
+				color: $txtColor;
+
+				.snack {
+					// nothing here
+
+					&__progress {
+						background-color: $txtColor;
+					}
+
+					&__close {
+						color: $txtColor;
+					}
+				}
+			}
+		}
+	}
+}

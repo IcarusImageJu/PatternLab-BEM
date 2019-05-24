@@ -1,0 +1,12 @@
+.container {
+    width: 100%;
+    padding: 0 2rem;
+    @include breakpoint(phone-only) {
+        padding: 0 1rem;
+    }
+    &_content {
+        // calc : 3 user or project item + 2 spaces between them + padding left and right
+        max-width: calc((#{$user-width} * 3) + (1rem * 2) + (2rem * 2);
+        margin: auto;
+    }
+}

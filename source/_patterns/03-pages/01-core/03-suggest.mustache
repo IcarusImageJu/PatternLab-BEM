@@ -1,0 +1,26 @@
+{{> organisms-headerConnected }}
+<div class="container">
+    {{> organisms-titling }}
+</div>
+{{> organisms-projectsList }}
+<div class="container">
+    {{> organisms-titling }}
+</div>
+{{> organisms-projectsList }}
+<div class="container">
+    {{> organisms-titling }}
+</div>
+
+<ul class="projects-list">
+    {{# listitems.seven }}
+    <li class="projects-list__item">
+        <article class="project">
+            <a href="#" class="project__link">
+                <div class="project__user">
+                    {{> organisms-userSimplified }}
+                </div>
+            </a>
+        </article>
+    </li>
+    {{/ listitems.seven }}
+</ul>

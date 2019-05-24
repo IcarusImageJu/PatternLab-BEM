@@ -1,0 +1,148 @@
+.message {
+    max-width: 80%;
+    border-radius: 0 $globalRadius $globalRadius $globalRadius;
+    border: $globalBorderWidth solid $darkRed;
+    color: $darkRed;
+    padding: .4rem .5rem;
+    margin-bottom: .5rem;
+    display: inline-block;
+    &__icon {
+        @extend .fa;
+    }
+    &__content{
+        @extend .body;
+        @include breakpoint(phone-only) {
+            font-size: .8rem;
+        }
+    }
+    &_me {
+        float: right;
+        margin-left: auto;
+        background: $colorPrimary;
+        color: white;
+        border-color: $colorPrimary;
+        border-radius: $globalRadius 0 $globalRadius $globalRadius;
+        .message {
+            // nothing here
+            &__content {
+            }
+        }
+    }
+    &_plan {
+        width: 100%;
+        max-width: 100%;
+        background: $colorPrimary;
+        color: white;
+        border-color: $colorPrimary;
+        border-radius: 0;
+        padding: 1rem .5rem;
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        .message {
+            // nothing here
+            &__content {
+            }
+            &__icon {
+                @extend .fa-bullhorn;
+                font-size: 2rem;
+            }
+        }
+    }
+    &_doc {
+        padding: .5rem 0;
+        background: none;
+        border: none;
+        .downloads {
+            margin-bottom: 0;
+        }
+        .message {
+            // nothing here
+            &__content {
+            }
+        }
+        &.message{
+            // nothing here
+            &_me{
+                color: $colorPrimary;
+            }
+        }
+    }
+    &_img {
+        @extend .cover;
+        height: 15rem;
+        width: 15rem;
+        cursor: pointer;
+        background: $colorPrimary;
+        .message {
+            // nothing here
+            &__content {
+                @extend .cover__img;
+                opacity: 1;
+                @include transition;
+                &:hover{
+                    opacity: .5;
+                }
+            }
+        }
+    }
+    &_event {
+        width: 100%;
+        max-width: 100%;
+        background: $grey;
+        color: white;
+        border-color: $grey;
+        border-radius: 0;
+        padding: 1rem .5rem;
+        text-align: center;
+        .message {
+            // nothing here
+            &__content {
+            }
+        }
+    }
+    &_time {
+        text-align: center;
+        position: relative;
+        opacity: .75;
+        border: none;
+        color: $grey;
+        max-width: 100%;
+        width: 100%;
+        &:after{
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            content: "";
+            width: 100%;
+            height: 1px;
+            display: block;
+            background: $grey;
+            opacity: .24;
+        }
+        .message {
+            // nothing here
+            &__content {
+                position: relative;
+                z-index: 2;
+                display: inline-block;
+                background: white;
+                padding: .5rem;
+                @extend .overline;
+                margin: 0;
+            }
+        }
+    }
+    &_followed{
+        margin-bottom: pxToRem(2);
+        border-radius: 0 $globalRadius $globalRadius 0;
+        &.message{
+            // nothing here
+            &_me{
+                border-radius: $globalRadius 0 0 $globalRadius;
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+<header class="main-header">
+    <h1 class="main-header__logo">
+        <a href="{{link.pages-homepage}}">
+            {{> atoms-logo }}
+            <span>L'agence et moi</span>
+        </a>
+    </h1>
+    {{> molecules-mainSearch }}
+    <button class="main-header__collapse" onclick="this.parentNode.classList.toggle('main-header_active')"></button>
+    <nav class="main-header__nav">
+        <ul class="main-nav">
+            <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Conseils</a>
+            </li>
+            <li class="main-nav__item">
+                <a href="{{link.pages-search}}" class="main-nav__link main-nav__link_active">Projets</a>
+            </li>
+            <li class="main-nav__item">
+                <a href="{{link.pages-login}}" class="main-nav__link">Se connecter</a>
+            </li>
+        </ul>
+    </nav>
+</header>

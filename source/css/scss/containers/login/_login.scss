@@ -1,0 +1,50 @@
+.login {
+    display: grid;
+    grid-template-areas:
+    "header"
+    "form"
+    "img";
+    grid-template-rows: auto auto 1fr;
+    grid-template-columns: 1fr;
+    min-height: 100vh;
+    @include breakpoint(tablet-portrait-up) {
+        grid-template-areas:
+        "header header"
+        "img form";
+        grid-template-rows: auto 1fr;
+        grid-template-columns: 2fr 3fr;
+    }
+    @include breakpoint(tablet-landscape-up) {
+        grid-template-areas:
+        "header header"
+        "img form";
+        grid-template-rows: auto 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+    @include breakpoint(desktop-up) {
+        grid-template-areas:
+        "header header"
+        "img form";
+        grid-template-rows: auto 1fr;
+        grid-template-columns: 2fr 1fr;
+    }
+    @include breakpoint(big-desktop-up) {
+        grid-template-areas:
+        "header header"
+        "img form";
+        grid-template-rows: auto 1fr;
+        grid-template-columns: 3fr 1fr;
+    }
+    &__form {
+        grid-area: form;
+        align-self: center;
+        padding: 2rem;
+    }
+    &__header {
+        grid-area: header;
+        margin-bottom: -2rem;
+    }
+    &__img {
+        grid-area: img;
+    }
+}

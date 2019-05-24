@@ -1,0 +1,58 @@
+.market-enter {
+    display: grid;
+    min-height: 60vh;
+    margin-bottom: $globalMarginBottom;
+    grid-template-areas:
+    "discover"
+    "advices"
+    "feedback";
+    @include breakpoint(tablet-portrait-up) {
+        grid-template-areas:
+        "discover discover"
+        "advices feedback";
+    }
+    @include breakpoint(tablet-landscape-up) {
+        grid-template-areas:
+        "discover advices"
+        "discover feedback";
+    }
+    &__panel {
+        color: white;
+        padding: 2rem 2rem 0;
+        grid-gap: 1rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+        "title"
+        "text"
+        "action";
+        &_discover {
+            grid-area: discover;
+            background: $blue;
+        }
+        &_advices {
+            grid-area: advices;
+            background: $grey;
+        }
+        &_feedback {
+            grid-area: feedback;
+            background: $red;
+        }
+    }
+    &__title {
+        @extend h4;
+        grid-area: title;
+        padding-left: 2rem;
+        border-left: 4px solid white;
+    }
+    &__text {
+        grid-area: text;
+        padding-left: 2rem;
+        max-width: 70ch;
+    }
+    &__action {
+        grid-area: action;
+        justify-self: end;
+    }
+}

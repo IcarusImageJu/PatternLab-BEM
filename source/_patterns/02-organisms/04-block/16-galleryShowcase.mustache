@@ -1,0 +1,17 @@
+
+<div class="gallery-showcase">
+    {{! <div class="gallery-slider__overlay"></div> }}
+    <button class="gallery-showcase__close">
+        <i class="fa fa-times"></i>
+    </button>
+    <div class="gallery-showcase__main">
+        <img class="gallery-showcase__img" src="https://placeimg.com/400/400/animals" alt="animals">
+    </div>
+    <ul class="gallery gallery-showcase__list gallery-showcase-list">
+        {{# listitems.twenty }}
+            <li class="gallery__item gallery-showcase-list__item">
+                <img class="gallery__img" src="https://placeimg.com/400/400/animals" alt="animals">
+            </li>
+        {{/ listitems.twenty }}
+    </ul>
+</div>

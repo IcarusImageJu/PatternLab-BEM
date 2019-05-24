@@ -1,0 +1,72 @@
+.table-row {
+	list-style: none;
+	display: grid;
+	justify-content: stretch;
+	grid-auto-flow: column;
+	padding: .5rem;
+	grid-gap: 1rem;
+
+	@extend .body-2;
+
+	margin: 0;
+	grid-auto-columns: 1fr;
+	align-items: center;
+
+	// @extend %fade;
+
+	&__item {
+
+		&_actions {
+			text-align: right;
+		}
+
+		&_input{
+			margin-bottom: none;
+		}
+
+		&_title {
+			font-weight: bold;
+		}
+	}
+
+	&__action {
+		// @extend .button, .button_size_tiny;
+
+		margin-bottom: 0;
+		// @extend .fa, .fa-fw;
+
+		&_edit {
+			// @extend .fa-edit;
+			@extend .button_link, .button_color_blue;
+			&:hover{
+				cursor: pointer;
+			}
+		}
+
+		&_delete {
+			// @extend .fa-trash;
+			@extend .button_color_red, .button_link;
+			&:hover{
+				cursor: pointer;
+			}
+		}
+
+		&_settings {
+			@extend .button_link;
+
+			opacity: .75;
+
+			& > * {
+				@extend .fa, .fa-cog;
+			}
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.table__row {
+	// @include animIteration(50, table-row);
+}

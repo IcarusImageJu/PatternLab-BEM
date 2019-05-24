@@ -1,0 +1,60 @@
+<div class="search-home"> 
+    <div class="grid grid_col_2">
+        {{! <div class="overline grid__child grid__child_col_2">Faites un vœu</div> }}
+        <div className="grid__child grid__child_col_1 grid__child_col-sm_2">
+            <Button disabled class="button button_width_full">Acquéreur</Button>
+        </div>
+        <div className="grid__child grid__child_col_1 grid__child_col-sm_2">
+            <Button class="button button_hollow button_width_full">Vendeur</Button>
+        </div>
+    </div>
+    <div class="search-home__main">
+        
+        {{> atoms-logo }}
+        <h2>
+            Faites un vœu !
+            {{! Réalisez le projet de vos rêves }}
+        </h2>
+    </div>
+    <div class="grid grid_col_2">
+        {{! <div class="subtitle grid__child grid__child_col_2">
+            
+            Parcourez les projets réalisés par notre communauté ou <a href="#">réalisez votre propre projet</a> et déclenchez un coup de coeur.
+            
+        </div> }}
+        <div class="grid__child grid__child_col_2">
+            <div class="select">
+                <input class="select__input" hidden name="select" type="text">
+                {{! <span class="select__placeholder">Placeholder</span> }}
+                <div class="select__value" onclick="this.parentNode.classList.add('select_active')">
+                    <span>Je veux vendre</span><i class="select__icon"></i>
+                </div>
+                <ul class="select__list" onclick="this.parentNode.classList.remove('select_active')">
+                    <li class="select__list-item">Je veux acheter</li>
+                    <li class="select__list-item select__list-item_active">Je veux vendre</li>
+                </ul>
+            </div>
+        </div>
+        <div class="grid__child grid__child_col_2">
+            <label class="label label_size_big" for="labeledInputBig">
+                Où ?
+            </label>
+            <input type="text" name="labeledInputBig" id="labeledInputBig">
+        </div>
+        <div class="grid__child grid__child_col_1 grid__child_col-sm_2">
+            <label class="label label_size_big" for="labeledInputBig">
+                Budget ?
+            </label>
+            <input type="text" name="labeledInputBig" id="labeledInputBig">
+        </div>
+        <div class="grid__child grid__child_col_1 grid__child_col-sm_2">
+            <label class="label label_size_big" for="labeledInputBig">
+                Nombre de chambres ?
+            </label>
+            {{> molecules-select }}
+        </div>
+        <button class="button grid__child grid__child_col_2">
+            Rechercher
+        </button>
+    </div>
+</div>

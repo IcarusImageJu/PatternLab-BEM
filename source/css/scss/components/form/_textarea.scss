@@ -1,0 +1,49 @@
+textarea{
+
+    min-height: pxToRem(156);
+}
+.textarea-box{
+    position: relative;
+}
+.textarea{
+    min-height: pxToRem(156);
+    &__error{
+        color: $colorDanger;
+        font-weight: 500;
+    }
+    &+.textarea{
+        &__error{
+            position: absolute;
+            top: pxToRem(156);
+            font-size: spToRem(16);
+            left: 0;
+            width: 100%;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+    }
+    &_small{
+        padding: calc((#{pxToRem(30)} - #{spToRem(16)}) / 2);
+        font-size: spToRem(14);
+        min-height: 80px;
+        margin-bottom: 1rem;
+        &+.textarea{
+            &__error{
+                position: absolute;
+                top: 80px;
+                font-size: spToRem(14);
+                left: 0;
+                width: 100%;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+        }
+    }
+    &_error{
+        border: $inputBorderWidth solid $colorDanger;
+        color: $colorDanger;
+    }
+
+}

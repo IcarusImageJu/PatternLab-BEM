@@ -1,0 +1,48 @@
+{
+  "name": "edition-node-gulp",
+  "description": "The gulp wrapper around patternlab-node core, providing tasks to interact with the core library and move supporting frontend assets.",
+  "version": "1.4.0",
+  "dependencies": {
+    "browser-sync": "^2.26.3",
+    "chalk": "^2.4.2",
+    "gulp": "^4.0.0",
+    "minimist": "^1.2.0",
+    "patternlab-node": "^2.12.0",
+    "plugin-node-clipboard": "^1.0.0",
+    "styleguidekit-assets-default": "^3.5.2",
+    "styleguidekit-mustache-default": "^3.1.0"
+  },
+  "keywords": [
+    "Pattern Lab",
+    "Atomic Web Design",
+    "Node",
+    "Gulp",
+    "Javascript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pattern-lab/edition-node-gulp.git"
+  },
+  "bugs": "https://github.com/pattern-lab/edition-node-gulp/issues",
+  "author": "Brian Muenzenmeyer",
+  "scripts": {
+    "start": "gulp patternlab:serve",
+    "build": "gulp patternlab:build",
+    "postinstall": "node scripts/postinstall.js"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=5.0"
+  },
+  "devDependencies": {
+    "bourbon": "^5.1.0",
+    "es6-symbol": "^3.1.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-clean-dest": "^0.2.0",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-sass": "4.0.2",
+    "normalize.css": "^8.0.1",
+    "sass-material-colors": "0.0.5"
+  }
+}

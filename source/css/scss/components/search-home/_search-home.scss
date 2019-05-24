@@ -1,0 +1,29 @@
+.search-home{
+    width: 100%;
+    &__main{
+        display: grid;
+        grid-template-columns: minmax(0, 3rem) auto;
+        grid-gap: 1rem;
+        grid-template-areas: "search-home__logo search-home__title";
+        margin-bottom: 2rem;
+        h2{
+            grid-area: search-home__title;
+            align-self: center;
+            margin: 0;
+        }
+        svg{
+            grid-area: search-home__logo;
+            
+        }
+    }
+    @include breakpoint(tablet-landscape-up) {
+        &__main{
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-areas: "search-home__title";
+            svg{
+                display: none;
+            }
+        }
+    }
+}

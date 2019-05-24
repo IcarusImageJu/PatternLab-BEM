@@ -1,0 +1,27 @@
+<div class="login">
+    <div class="login__header">
+        {{> organisms-header }}
+    </div>
+    <form action={{ link.pages-myAccount }} class="login__form">
+        <h5>Se connecter</h5>
+        <p>Connectez-vous à votre compte ou <a href="#">créons ensemble votre compte</a> pour vous pouvoir planifier des visites de projets.</p>
+        <label for="labeledInput">
+            Adresse email
+        </label>
+        <input type="text" name="labeledInput" id="labeledInput">
+        <label for="labeledInput">
+            Mot de passe
+        </label>
+        {{> molecules-password }}
+        <label for="checkbox" class="margin_bottom display_block">
+            {{> molecules-checkbox }}
+            <span>Rester connecter ?</span>
+        </label>
+        <button class="button button_width_full">Connexion</button>
+        <hr>
+        <a href="#" class="button button_width_full button_link">Récupérer mon mot de passe</a>
+    </form>
+    <div class="login__img cover">
+        <img class="cover__img" src="https://placeimg.com/1500/1500/arch" alt="">
+    </div>
+</div>

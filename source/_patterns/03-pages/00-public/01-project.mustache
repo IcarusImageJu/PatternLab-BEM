@@ -1,0 +1,105 @@
+{{> organisms-header }}
+{{> organisms-heroProject }}
+<main class="container container_content">
+    <div class="grid grid_col_5">
+        <div class="grid__child_col_5 grid__child_col-lg_3 margin_top">
+            <div class="subtitle-2">
+                Loft à acheter à Créteil
+            </div>
+            <h5>Loft lumineux de 160m² avec trois chambres à deux pas du quartier business</h5>
+            <div class="read-more">
+                <p>Ce loft de trois grande chambres (20m² / 24m² / 27m²) convient parfaitement pour une famille de quatre.</p>
+                <p>Il est orienté plein sud et offre une grande luminosité grace ses plafonds haut (6m) et ses vitres industrielles.</p>
+                <p>Le batiment à été construit en 1920 et entiérement rénové en 2015 aprés la fermeture de l’usine et la transformation des locaux de couture en appartement de luxe. Les voutes, les poutres et les colonnes en metals on été conservées d’origine. Toutes les vitres exterieurs sont en triple vitrage pour un silence et une isolation asurée. Le PEB du loft est B grâce au toit apparant en chanvre compréssés.</p>
+                <div class="read-more__action">
+                    <button onclick="this.parentNode.parentNode.classList.add('read-more_active')" type="button" class="button button_size_small button_color_white">
+                        Lire toute la description
+                    </button>
+                </div>
+            </div>
+            <div class="subtitle-2">
+                Situation: <small>12.6km de votre position</small>
+            </div>
+            <div class="maps">
+                <div class="maps__action">
+                    <button onclick="this.parentNode.parentNode.classList.add('read-more_active')" class="button button_size_small button_color_white">
+                        Activer la carte
+                    </button>
+                </div>
+            </div>
+            <div class="subtitle-2">
+                Caractéristique du projet
+            </div>
+            <ul class="grid grid_col_4 grid_col-sm_1 grid_col-md_2 grid_col-lg_3 list list_no_style list_no_margin list_no_padding list_link">
+                <li>
+                    <a href="#">
+                        <i class="fa fa-phone"></i> Raccordement Téléphone
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fab fa-internet-explorer"></i> Fibre optique
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-lightbulb"></i> Plus lumineux
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-plus"></i> Plus grand
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-minus"></i> Plus petit
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-euro-sign"></i> Plus cher
+                    </a>
+                </li>
+            </ul>
+            
+            <div class="grid grid_col_2">
+                <div class="grid__child_col_1">
+                    {{> organisms-dpe}}
+                </div>
+                <div class="grid__child_col_1">
+                    {{> organisms-ges}}
+                </div>
+            </div>
+            <div class="subtitle-2">
+                Historique du projet
+            </div>
+            <div class="read-more">
+                <p>Ce loft de trois grande chambres (20m² / 24m² / 27m²) convient parfaitement pour une famille de quatre.</p>
+                <p>Il est orienté plein sud et offre une grande luminosité grace ses plafonds haut (6m) et ses vitres industrielles.</p>
+                <p>Le batiment à été construit en 1920 et entiérement rénové en 2015 aprés la fermeture de l’usine et la transformation des locaux de couture en appartement de luxe. Les voutes, les poutres et les colonnes en metals on été conservées d’origine. Toutes les vitres exterieurs sont en triple vitrage pour un silence et une isolation asurée. Le PEB du loft est B grâce au toit apparant en chanvre compréssés.</p>
+                <div class="read-more__action">
+                    <button onclick="this.parentNode.parentNode.classList.add('read-more_active')" type="button" class="button button_size_small button_color_white">
+                        Lire tout l'historique
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="grid__child_col_5 grid__child_col-lg_2">
+            {{> organisms-sidebarProject }}
+        </div>
+    </div>
+    <hr>
+    {{> organisms-titling }}
+    <div class="grid grid_overflow grid_col_3 margin_bottom">
+        {{# listitems.three }}
+            {{> organisms-project }}
+        {{/ listitems.three }}
+    </div>
+    <div class="text_right">
+        <a href="#" class="button button_color_red button_link">Voir tous vos coups de coeur <i class="fa-arrow-right"></i></a>
+    </div>
+    {{> organisms-titling }}
+    {{> organisms-fineTuning }}
+</main>
+{{> organisms-footer }}

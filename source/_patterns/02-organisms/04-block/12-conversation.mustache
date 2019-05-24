@@ -1,0 +1,31 @@
+<div class="conversation">
+    <div class="conversation__context">
+        {{> organisms-userBig }}
+    </div>
+    <div class="conversation__planner">
+        <button class="button button_size_small button_hollow button_color_white">16-08-2018</button>
+        <button class="button button_size_small button_hollow button_color_white">16h30</button>
+        <button class="button button_size_small button_color_white">Planifier</button>
+    </div>
+    <div id="conversationContent" class="conversation__content">
+        {{> organisms-messages }}
+    </div>
+    <div class="conversation__actions">
+        <button class="button button_size_small button_color_white button_link">
+            <i class="fa-plus"></i>
+        </button>
+        <button class="button button_size_small button_color_white button_link">
+            <i class="fa-video"></i>
+        </button>
+    </div>
+    <div class="conversation__comment">
+        {{> organisms-sendMessage }}
+    </div>
+</div>
+<script>
+    function gotoBottom(id){
+        const element = document.getElementById(id);
+        element.scrollTop = element.scrollHeight - element.clientHeight;
+    }
+    gotoBottom('conversationContent');
+</script>
